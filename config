@@ -1,0 +1,5 @@
+export CF_EMAIL=
+export CF_KEY=
+export CF_DEBUG=true
+# Use this for staging
+#export CA="https://acme-staging.api.letsencrypt.org/directory"
