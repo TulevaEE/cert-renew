@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3.14
 
 RUN apk add --update gcc musl-dev openssl-dev libffi-dev build-base
 RUN apk add --update py3-pip python3-dev git bash openssl curl
