@@ -30,7 +30,7 @@ jobs:
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
-          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "::set-output name=image::$REGISTRY/$REPOSITORY:$IMAGE_TAG"
       - name: Download task definition
         run: |
           aws ecs describe-task-definition --task-definition cert-renew --query taskDefinition > task-definition.json
