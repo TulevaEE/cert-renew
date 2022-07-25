@@ -15,9 +15,8 @@ certbot certonly \
   --dns-cloudflare-credentials ~/.secrets/cloudflare.ini \
   --dns-cloudflare-propagation-seconds 60 \
   -d pension.tuleva.ee \
-  -d id.tuleva.ee \
-  --staging
+  -d id.tuleva.ee
 
 echo "Uploading new certificate"
 
-aws s3 cp --recursive /etc/letsencrypt/live/pension.tuleva.ee s3://"$SECRETS_BUCKET/ssl/staging"
+aws s3 cp --recursive /etc/letsencrypt/live/pension.tuleva.ee s3://"$SECRETS_BUCKET/ssl"
