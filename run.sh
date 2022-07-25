@@ -1,2 +1,2 @@
 docker build --tag letscf .
-docker run -v `pwd`/certs:/dehydrated/certs/ -it --rm letscf:latest
+docker run -it --rm -e CF_API_TOKEN="$CF_API_TOKEN" letscf:latest

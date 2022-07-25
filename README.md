@@ -2,8 +2,6 @@
 
 Renews Let’s Encrypt certificates using CloudFlare DNS verification.
 
-- Specify missing config variables in `config`
-- Build `docker build --tag letscf .`
-- Run `docker run -v $(pwd)/certs:/dehydrated/certs/ -it --rm letscf:latest`
-- Upload certs from `${pwd}/certs/` to `s3://tulevasecrets/ssl/`
+- Define env variables **CF_API_TOKEN** and **SECRETS_BUCKET**
+- Run `run.sh`
 - Redeploy the latest application version 
