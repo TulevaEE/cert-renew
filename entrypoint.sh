@@ -20,4 +20,4 @@ certbot certonly \
 
 echo "Uploading new certificate"
 
-aws s3 cp --recursive /etc/letsencrypt/live/pension.tuleva.ee "$SECRETS_BUCKET/ssl/staging"
+aws s3 cp --recursive /etc/letsencrypt/live/pension.tuleva.ee s3://"$SECRETS_BUCKET/ssl/staging"
